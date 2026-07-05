@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1757d9" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="StudentOS" />
+    <title>StudentOS</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-180.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-label="StudentOS hybrid app prototype">
+      <section class="phone theme-dark" aria-live="polite">
+        <div class="status-bar">
+          <span>9:41</span>
+          <span class="status-icons">●●● 5G ▰</span>
+        </div>
+        <!-- Screens are loaded dynamically here -->
+        <div id="screens-container"></div>
+      </section>
+
+      <aside class="screen-picker" aria-label="Prototype screens">
+        <button class="active" type="button" data-go="welcome">Welcome</button>
+        <button type="button" data-go="home">Home</button>
+        <button type="button" data-go="schedule">Schedule</button>
+        <button type="button" data-go="notice">Notices</button>
+        <button type="button" data-go="study">Study</button>
+        <button type="button" data-go="chat">Chat</button>
+        <button type="button" data-go="emergency">SOS</button>
+      </aside>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

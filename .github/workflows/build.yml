@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./bui
+        working-directory: ./src
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
@@ -37,6 +37,7 @@ jobs:
           mkdir -p www
           cp index.html app.js styles.css manifest.json service-worker.js www/
           cp -r icons www/
+          cp -r screens www/
 
       - name: Add Android platform
         run: npx cap add android
@@ -56,4 +57,4 @@ jobs:
         uses: actions/upload-artifact@v5
         with:
           name: app-debug.apk
-          path: bui/android/app/build/outputs/apk/debug/app-debug.apk
+          path: src/android/app/build/outputs/apk/debug/app-debug.apk
