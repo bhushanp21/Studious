@@ -35,9 +35,14 @@ jobs:
       - name: Add Android platform
         run: npx cap add android
 
+      - name: Sync Capacitor
+        run: npx cap sync android
+
+      - name: Copy web assets to Android
+        run: npx cap copy android
+
       - name: Build Android App
         run: |
-          npx cap sync
           cd android
           ./gradlew assembleDebug
 
