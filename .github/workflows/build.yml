@@ -32,6 +32,12 @@ jobs:
       - name: Install Capacitor CLI and dependencies
         run: npm install @capacitor/cli @capacitor/core @capacitor/android
 
+      - name: Stage web assets
+        run: |
+          mkdir -p www
+          cp index.html app.js styles.css manifest.json service-worker.js www/
+          cp -r icons www/
+
       - name: Add Android platform
         run: npx cap add android
 
