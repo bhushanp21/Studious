@@ -958,7 +958,10 @@ button {
 }
 
 .schedule-container {
-  padding-bottom: 90px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-bottom: 24px;
 }
 
 .schedule-view {
@@ -969,6 +972,16 @@ button {
 .schedule-view.active {
   display: block;
   animation: fadeIn 0.3s ease;
+}
+
+[data-screen="schedule"].screen.active {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+[data-screen="schedule"] .schedule-tabs-container {
+  flex-shrink: 0;
 }
 
 .schedule-view h2 {
@@ -982,6 +995,35 @@ button {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.no-class-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+  text-align: center;
+  gap: 8px;
+}
+
+.no-class-emoji {
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.no-class-day h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.no-class-day p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-light, #888);
 }
 
 .schedule-item {
@@ -1073,6 +1115,24 @@ button {
 .mini-subject.orange { background: #f97316; }
 .mini-subject.teal { background: #06b6d4; }
 .mini-subject.yellow { background: #eab308; }
+.mini-subject.pink { background: #ec4899; }
+.mini-subject.cyan { background: #06b6d4; }
+.mini-subject.purple { background: #a855f7; }
+
+/* Loading and Error States */
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.error {
+  text-align: center;
+  padding: 20px;
+  color: #dc2626;
+  font-size: 0.9rem;
+}
 
 /* Notice Board Styles */
 .notice-header {
@@ -1123,7 +1183,20 @@ button {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 16px 0 80px;
+  padding: 16px 0 24px;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+[data-screen="notice"].screen.active {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+[data-screen="notice"] .notice-header {
+  flex-shrink: 0;
 }
 
 .notice-card {
