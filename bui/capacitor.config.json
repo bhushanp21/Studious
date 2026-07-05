@@ -1,0 +1,8 @@
+{
+  "appId": "com.studentos.app",
+  "appName": "StudentOS",
+  "webDir": ".",
+  "server": {
+    "androidScheme": "https"
+  }
+}

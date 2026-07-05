@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1757d9" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="StudentOS" />
+    <title>StudentOS</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-180.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-label="StudentOS hybrid app prototype">
+      <section class="phone theme-dark" aria-live="polite">
+        <div class="status-bar">
+          <span>9:41</span>
+          <span class="status-icons">●●● 5G ▰</span>
+        </div>
+
+        <section class="screen screen-lock active" data-screen="lock" aria-label="Lock screen">
+          <div class="lock-top">
+            <div class="mini-icon">⌂</div>
+            <p>StudentOS</p>
+            <h1>9:41</h1>
+            <span>Wednesday, 24 April</span>
+          </div>
+          <div class="mountains" aria-hidden="true">
+            <div class="sun"></div>
+            <div class="ridge ridge-one"></div>
+            <div class="ridge ridge-two"></div>
+            <div class="lake"></div>
+          </div>
+          <div class="lock-message">Every day is a<br />chance to learn<br />something new.</div>
+          <button class="unlock-button" type="button" data-go="home" aria-label="Swipe up to unlock">
+            <span>Swipe up to unlock</span>
+            <strong>⌃</strong>
+          </button>
+        </section>
+
+        <section class="screen" data-screen="home" aria-label="Home screen">
+          <header class="home-header">
+            <div class="avatar boy">A</div>
+            <div>
+              <span>Good Morning,</span>
+              <h1>Aarav</h1>
+            </div>
+            <button class="round-button" type="button" aria-label="Notifications">⌁</button>
+          </header>
+
+          <article class="plan-card">
+            <div class="card-title-row">
+              <div>
+                <h2>Today's Plan</h2>
+                <p>Wednesday, 24 April</p>
+              </div>
+              <span class="chip">हिंदी</span>
+            </div>
+            <ol class="schedule-list">
+              <li><i class="dot orange"></i><time>10:00 AM</time><strong>Mathematics</strong></li>
+              <li><i class="dot green"></i><time>12:00 PM</time><strong>Science</strong></li>
+              <li><i class="dot mint"></i><time>02:00 PM</time><strong>English</strong></li>
+              <li><i class="dot lime"></i><time>04:00 PM</time><strong>Football Practice</strong></li>
+            </ol>
+          </article>
+
+          <nav class="feature-grid" aria-label="Student features">
+            <button class="feature-card green" type="button" data-go="study"><span>▰</span>Homework</button>
+            <button class="feature-card blue" type="button"><span>♚</span>Classes</button>
+            <button class="feature-card violet" type="button" data-go="chat"><i>3</i><span>☷</span>Messages</button>
+            <button class="feature-card orange" type="button"><span>◒</span>Learning</button>
+            <button class="feature-card teal" type="button"><span>□</span>Library</button>
+            <button class="feature-card yellow" type="button"><span>◉</span>Achievements</button>
+          </nav>
+
+          <nav class="tab-bar" aria-label="Primary navigation">
+            <button class="active" type="button" data-go="home"><span>⌂</span>Home</button>
+            <button type="button" data-go="study"><span>▣</span>Study</button>
+            <button type="button" data-go="emergency"><span>♢</span>Safety</button>
+            <button type="button"><span>♙</span>Profile</button>
+          </nav>
+        </section>
+
+        <section class="screen" data-screen="study" aria-label="Study mode">
+          <header class="mode-header">
+            <div class="book-icon">▰</div>
+            <h1>Study Mode</h1>
+            <button class="shield" type="button" data-go="emergency" aria-label="Open safety screen">♢</button>
+          </header>
+          <div class="timer">01:25:00</div>
+          <p class="focus-copy">Stay focused! You can do it.</p>
+          <div class="study-illustration" aria-hidden="true">
+            <div class="desk"></div>
+            <div class="student-head"></div>
+            <div class="student-body"></div>
+            <div class="paper"></div>
+            <div class="lamp"></div>
+            <div class="plant"></div>
+          </div>
+          <section class="progress-panel">
+            <h2>Today's Progress</h2>
+            <div class="progress-row"><span>Homework</span><strong>3/5</strong><i><b style="width:68%"></b></i></div>
+            <div class="progress-row"><span>Reading</span><strong>20 min</strong><i><b style="width:45%"></b></i></div>
+            <div class="progress-row"><span>Focus Time</span><strong>40 min</strong><i><b style="width:62%"></b></i></div>
+          </section>
+          <button class="danger-action" type="button" data-go="home">End Study Mode</button>
+        </section>
+
+        <section class="screen" data-screen="chat" aria-label="Class chat">
+          <header class="chat-header">
+            <button type="button" data-go="home" aria-label="Back">‹</button>
+            <div>
+              <h1>Class 7 - A</h1>
+              <span>32 members</span>
+            </div>
+            <button type="button" aria-label="More options">⋮</button>
+          </header>
+          <div class="chat-list">
+            <article class="message teacher">
+              <div class="avatar boy">S</div>
+              <p><strong>Mr. Sharma</strong><small>(Teacher)</small>Good morning everyone!<br />Don't forget to submit your Science project by Friday.</p>
+              <time>9:30 AM</time>
+            </article>
+            <article class="message pink">
+              <div class="avatar girl">A</div>
+              <p><strong>Ananya</strong>Good morning, Sir!<br />We will submit it.</p>
+              <time>9:31 AM</time>
+            </article>
+            <article class="message green">
+              <div class="avatar boy">R</div>
+              <p><strong>Rohit</strong>Sir, will there be a quiz tomorrow?</p>
+              <time>9:32 AM</time>
+            </article>
+            <article class="message teacher">
+              <div class="avatar boy">S</div>
+              <p><strong>Mr. Sharma</strong><small>(Teacher)</small>Yes Rohit, prepare Chapter 5 and 6.</p>
+              <time>9:33 AM</time>
+            </article>
+          </div>
+          <form class="message-form">
+            <button type="button" aria-label="Add attachment">+</button>
+            <input aria-label="Message" placeholder="Type a message..." />
+            <button type="button" aria-label="Voice message">◌</button>
+          </form>
+        </section>
+
+        <section class="screen emergency-screen" data-screen="emergency" aria-label="Emergency screen">
+          <div class="siren">⌂</div>
+          <h1>Emergency</h1>
+          <p>Help is on the way</p>
+          <button class="sos-button" type="button">SOS<span>Tap to Alert</span></button>
+          <section class="location-card">
+            <p>Sharing your location with</p>
+            <ul>
+              <li><span class="avatar small girl">M</span>Mom <b>☎</b></li>
+              <li><span class="avatar small boy">D</span>Dad <b>☎</b></li>
+              <li><span class="avatar small boy">H</span>School Helpline <b>☎</b></li>
+            </ul>
+          </section>
+          <button class="cancel-button" type="button" data-go="home">Cancel</button>
+        </section>
+      </section>
+
+      <aside class="screen-picker" aria-label="Prototype screens">
+        <button class="active" type="button" data-go="lock">Lock</button>
+        <button type="button" data-go="home">Home</button>
+        <button type="button" data-go="study">Study</button>
+        <button type="button" data-go="chat">Chat</button>
+        <button type="button" data-go="emergency">SOS</button>
+      </aside>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
