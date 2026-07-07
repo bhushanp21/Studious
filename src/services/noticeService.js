@@ -32,13 +32,21 @@ const noticeService = {
         title: 'Maths Unit Test Next Monday',
         content: 'Unit test on Algebra and Geometry will be conducted next Monday. Topics: Linear equations, Quadratic equations, and Basic geometry proofs. Study from chapters 3 and 4.',
         author: '👨‍🏫 Mr. Patel (Mathematics)',
+        time: '2 days ago, 11:00 AM'
+      },
+      {
+        id: 4,
+        category: 'academic',
+        title: 'English Assignment Due',
+        content: 'Write an essay on "The Impact of Technology on Society" (800-1000 words). Due date: April 28. Submit through email with subject line: "Class 7A - Essay Assignment".',
+        author: '👩‍🏫 Ms. Singh (English)',
         time: '3 days ago, 4:20 PM'
       },
       {
         id: 5,
         category: '',
         title: 'Sports Day Registration Open',
-        content: 'Registration for Annual Sports Day is now open! Choose        content: 'Registration for Annual Sports DaHi        content: 'Registration f with your PE teacher before April 30.',
+        content: 'Registration for Annual Sports Day is now open! Choose from events: 100m Sprint, 4x100 Relay, Long Jump, High Jump, and Badminton. Register with your PE teacher before April 30.',
         author: '⚽ Coach Kumar (PE)',
         time: '5 days ago, 9:00 AM'
       }

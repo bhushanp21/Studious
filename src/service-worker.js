@@ -1,4 +1,4 @@
-const CACHE_NAME = "studentos-v1";
+const CACHE_NAME = "studentos-v4";
 const ASSETS = [
   "./",
   "./index.html",
@@ -7,7 +7,13 @@ const ASSETS = [
   "./manifest.json",
   "./icons/icon-180.png",
   "./icons/icon-192.png",
-  "./icons/icon-512.png"
+  "./icons/icon-512.png",
+  "./screens/home.html",
+  "./screens/schedule.html",
+  "./screens/notice.html",
+  "./screens/homework.html",
+  "./screens/emergency.html",
+  "./footer.html"
 ];
 
 self.addEventListener("install", (event) => {
@@ -24,5 +30,12 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+  
+  // Skip caching for HTML files - always fetch fresh
+  if (event.request.url.endsWith('.html')) {
+    event.respondWith(fetch(event.request));
+    return;
+  }
+  
   event.respondWith(caches.match(event.request).then((cached) => cached || fetch(event.request)));
 });
